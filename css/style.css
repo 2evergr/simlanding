@@ -14,14 +14,6 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-body .logo {
-  width: 80px;
-  padding: 0 10px;
-}
-body .logo svg {
-  width: 100%;
-  height: 100%;
-}
 body header {
   position: absolute;
   z-index: 9999;
@@ -39,12 +31,24 @@ body header nav {
   justify-content: space-between;
   align-items: center;
 }
+body header nav .logo {
+  width: 80px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+body header nav .logo svg {
+  width: 100%;
+  height: 100%;
+}
 body header nav ul {
   display: flex;
   list-style: none;
   align-items: center;
 }
 body header nav ul li {
+  display: flex;
+  align-items: center;
   padding: 0 1rem;
 }
 body header nav ul li a {
