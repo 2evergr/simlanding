@@ -67,230 +67,6 @@ body header nav ul li a {
   font-weight: 300;
   font-size: 0.9rem;
 }
-body main .hero-section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  background-color: #178dc5;
-  background-image: url("../img/whale-grass/hero/bg-mobile.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-body main .hero-section .parallax {
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
-}
-body main .hero-section .whale {
-  position: absolute;
-  width: 60%;
-  max-width: 400px;
-  top: 65%;
-  left: calc(50% - 0px);
-  z-index: 3;
-}
-body main .hero-section .text {
-  position: absolute;
-  top: 30%;
-  left: calc(50% - 0px);
-  z-index: 6;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  pointer-events: auto;
-  width: 100%;
-}
-body main .hero-section .text h1 {
-  font-weight: 800;
-  font-size: 6rem;
-  line-height: 1.1;
-}
-body main .hero-section .text h2 {
-  font-weight: 100;
-  font-size: 4.5rem;
-  line-height: 1.1;
-}
-body main .hero-section .bg {
-  display: none;
-  position: absolute;
-  width: calc(100% + 400px);
-  top: calc(50% - 100px);
-  left: calc(50% + 10px);
-  z-index: 1;
-}
-body main .hero-section .ground {
-  display: none;
-  position: absolute;
-  width: calc(100% + 400px);
-  top: calc(50% + 500px);
-  left: calc(50% + 10px);
-  z-index: 2;
-}
-body main .hero-section .bg-1-left {
-  display: none;
-  position: absolute;
-  width: 600px;
-  top: calc(50% - 160px);
-  left: calc(50% - 1040px);
-  z-index: 3;
-}
-body main .hero-section .bg-2-left {
-  display: none;
-  position: absolute;
-  width: 740px;
-  top: calc(50% + 50px);
-  left: calc(50% - 920px);
-  z-index: 4;
-}
-body main .hero-section .bg-3-left {
-  display: none;
-  position: absolute;
-  width: 1000px;
-  top: calc(50% + 400px);
-  left: calc(50% - 820px);
-  z-index: 4;
-}
-body main .hero-section .bg-1-right {
-  display: none;
-  position: absolute;
-  width: 600px;
-  top: calc(50% - 160px);
-  left: calc(50% + 1040px);
-  z-index: 3;
-}
-body main .hero-section .bg-2-right {
-  display: none;
-  position: absolute;
-  width: 740px;
-  top: calc(50% + 50px);
-  left: calc(50% + 1000px);
-  z-index: 4;
-}
-body main .hero-section .bg-3-right {
-  display: none;
-  position: absolute;
-  width: 1000px;
-  top: calc(50% + 400px);
-  left: calc(50% + 820px);
-  z-index: 4;
-}
-body main .hero-section .vignette {
-  position: absolute;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.7) 100%);
-  pointer-events: none;
-}
-body main .story-section {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-body main .story-section div {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-body main .story-section div img {
-  position: absolute;
-  max-width: 800px;
-  z-index: 1;
-  opacity: 0.4;
-  width: 100%;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-}
-body main .story-section div p {
-  color: #1A1A1A;
-  font-size: 2rem;
-  z-index: 2;
-  text-shadow: 0px 0px 4px white;
-  padding: 0 1.4rem;
-  width: 100%;
-  text-align: center;
-}
-body main .best-section {
-  margin-bottom: 10rem;
-  overflow: hidden;
-}
-body main .best-section .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* 두 개의 div 사이에 여백을 고르게 분배 */
-  padding: 0 20px; /* 컨테이너의 좌우 여백 */
-  margin: 6rem 0;
-  max-width: 1200px;
-  margin: auto;
-}
-body main .best-section .container .best-part {
-  flex: 1; /* 각 div가 동일한 크기를 가지도록 */
-  margin: 0 3.8rem; /* 각 div 사이에 여백을 설정 */
-}
-body main .best-section .container .img img {
-  width: 100%;
-  max-width: 460px;
-}
-body main .best-section .container .text {
-  color: #828282;
-  font-size: 1.2rem;
-}
-body main .best-section .container .text h2 {
-  color: #1A1A1A;
-  font-size: 1.8rem;
-  margin-bottom: 1.4rem;
-}
-body main .best-section .best-part-1 {
-  flex-direction: row-reverse;
-}
-@media (max-width: 600px) {
-  body main .best-section .container {
-    flex-direction: column; /* 작은 화면에서는 세로 방향으로 정렬 */
-    align-items: center;
-  }
-  body main .best-section .container .best-part {
-    margin: 10px 0; /* 세로 정렬 시 위아래 여백 */
-  }
-}
-body main .summary-section {
-  display: block;
-  position: relative;
-  height: 75vh;
-  overflow: hidden;
-  background-image: url("../img/whale-grass/summary/bg.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-body main .summary-section .desc {
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  width: 100%;
-  padding: 0 20px;
-  color: #fff;
-  text-align: center;
-  transform: translateX(-50%);
-  font-size: 1.2rem;
-  font-weight: 300;
-}
-body main .summary-section .desc .tit {
-  margin-bottom: 1.6rem;
-}
-body main .summary-section .desc .tit span {
-  font-size: 1.8rem;
-  font-weight: 400;
-}
 body footer {
   font-size: 1rem;
   font-weight: 300;
@@ -315,22 +91,251 @@ body footer .copyright {
   font-size: 0.8rem;
 }
 
+#hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #178dc5;
+}
+#hero-section .parallax {
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
+}
+#hero-section .whale {
+  position: absolute;
+  width: 60%;
+  max-width: 400px;
+  top: 65%;
+  left: calc(50% - 0px);
+  z-index: 3;
+}
+#hero-section .text {
+  position: absolute;
+  top: 30%;
+  left: calc(50% - 0px);
+  z-index: 6;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  pointer-events: auto;
+  width: 100%;
+}
+#hero-section .text h1 {
+  font-weight: 800;
+  font-size: 6rem;
+  line-height: 1.1;
+}
+#hero-section .text h2 {
+  font-weight: 100;
+  font-size: 4.5rem;
+  line-height: 1.1;
+}
+#hero-section .bg {
+  display: none;
+  position: absolute;
+  width: calc(100% + 400px);
+  top: calc(50% - 100px);
+  left: calc(50% + 10px);
+  z-index: 1;
+}
+#hero-section .bg-mobile {
+  position: absolute;
+  height: 120vh;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+}
+#hero-section .ground {
+  display: none;
+  position: absolute;
+  width: calc(100% + 400px);
+  top: calc(50% + 500px);
+  left: calc(50% + 10px);
+  z-index: 2;
+}
+#hero-section .bg-1-left {
+  display: none;
+  position: absolute;
+  width: 600px;
+  top: calc(50% - 160px);
+  left: calc(50% - 1040px);
+  z-index: 3;
+}
+#hero-section .bg-2-left {
+  display: none;
+  position: absolute;
+  width: 740px;
+  top: calc(50% + 50px);
+  left: calc(50% - 920px);
+  z-index: 4;
+}
+#hero-section .bg-3-left {
+  display: none;
+  position: absolute;
+  width: 1000px;
+  top: calc(50% + 400px);
+  left: calc(50% - 820px);
+  z-index: 4;
+}
+#hero-section .bg-1-right {
+  display: none;
+  position: absolute;
+  width: 600px;
+  top: calc(50% - 160px);
+  left: calc(50% + 1040px);
+  z-index: 3;
+}
+#hero-section .bg-2-right {
+  display: none;
+  position: absolute;
+  width: 740px;
+  top: calc(50% + 50px);
+  left: calc(50% + 1000px);
+  z-index: 4;
+}
+#hero-section .bg-3-right {
+  display: none;
+  position: absolute;
+  width: 1000px;
+  top: calc(50% + 400px);
+  left: calc(50% + 820px);
+  z-index: 4;
+}
+#hero-section .vignette {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.7) 100%);
+  pointer-events: none;
+}
+
+#story-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#story-section div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#story-section div img {
+  position: absolute;
+  max-width: 800px;
+  z-index: 1;
+  opacity: 0.4;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+#story-section div p {
+  color: #1A1A1A;
+  font-size: 2rem;
+  z-index: 2;
+  text-shadow: 0px 0px 4px white;
+  padding: 0 1.4rem;
+  width: 100%;
+  text-align: center;
+}
+#best-section {
+  margin-bottom: 10rem;
+  overflow: hidden;
+}
+#best-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 두 개의 div 사이에 여백을 고르게 분배 */
+  padding: 0 20px; /* 컨테이너의 좌우 여백 */
+  margin: 6rem 0;
+  max-width: 1200px;
+  margin: auto;
+}
+#best-section .container .best-part {
+  flex: 1; /* 각 div가 동일한 크기를 가지도록 */
+  margin: 0 3.8rem; /* 각 div 사이에 여백을 설정 */
+}
+#best-section .container .img img {
+  width: 100%;
+  max-width: 460px;
+}
+#best-section .container .text {
+  color: #828282;
+  font-size: 1.2rem;
+}
+#best-section .container .text h2 {
+  color: #1A1A1A;
+  font-size: 1.8rem;
+  margin-bottom: 1.4rem;
+}
+#best-section .best-part-1 {
+  flex-direction: row-reverse;
+}
+@media (max-width: 600px) {
+  #best-section .container {
+    flex-direction: column; /* 작은 화면에서는 세로 방향으로 정렬 */
+    align-items: center;
+  }
+  #best-section .container .best-part {
+    margin: 10px 0; /* 세로 정렬 시 위아래 여백 */
+  }
+}
+
+#summary-section {
+  display: block;
+  position: relative;
+  height: 75vh;
+  overflow: hidden;
+  background-image: url("../img/whale-grass/summary/bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#summary-section .desc {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  width: 100%;
+  padding: 0 20px;
+  color: #fff;
+  text-align: center;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+#summary-section .desc .tit {
+  margin-bottom: 1.6rem;
+}
+#summary-section .desc .tit span {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
 @media (min-width: 768px) {
   :root,
   html {
     font-size: 12px;
   }
-  body main .hero-section {
-    background-image: none;
+  #hero-section .bg-mobile {
+    display: none;
   }
-  body main .hero-section .bg,
-  body main .hero-section .ground,
-  body main .hero-section .bg-1-left,
-  body main .hero-section .bg-2-left,
-  body main .hero-section .bg-3-left,
-  body main .hero-section .bg-1-right,
-  body main .hero-section .bg-2-right,
-  body main .hero-section .bg-3-right {
+  #hero-section .bg,
+  #hero-section .ground,
+  #hero-section .bg-1-left,
+  #hero-section .bg-2-left,
+  #hero-section .bg-3-left,
+  #hero-section .bg-1-right,
+  #hero-section .bg-2-right,
+  #hero-section .bg-3-right {
     display: block;
   }
 }

@@ -49,11 +49,11 @@ window.addEventListener("mousemove", (e) => {
 
 /* GSAP Animation */
 const hero_tl = gsap.timeline();
-hero_tl.to(".hero-section", { autoAlpha: 0, duration: 1 });
+hero_tl.to("#hero-section", { autoAlpha: 0, duration: 1 });
 
 ScrollTrigger.create({
   animation: hero_tl,
-  trigger: ".hero-section",
+  trigger: "#hero-section",
   start: "10% top",
   end: "80% top",
   scrub: true,
@@ -64,7 +64,7 @@ ScrollTrigger.create({
 
 const story_tl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".story-section",
+    trigger: "#story-section",
     start: "top top",
     end: "+=6000",
     scrub: true,
@@ -91,7 +91,7 @@ story_tl
 
 const best_tl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".best-section",
+    trigger: "#best-section",
     start: "top bottom",
     end: "+=6000",
     markers: false,

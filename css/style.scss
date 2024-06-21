@@ -18,7 +18,6 @@ html {
   font-size: 10px;
 }
 
-
 body {
   // font-size: clamp(0.6rem, 2.5vw, 2rem);
   font-family: "Noto Sans KR", sans-serif;
@@ -72,280 +71,6 @@ body {
       }
     }
   }
-
-  main {
-    .hero-section {
-      position: relative;
-      // width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-      background-color: #178dc5;
-
-      background-image: url("../img/whale-grass/hero/bg-mobile.png");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-
-      .parallax {
-        pointer-events: none;
-        transform: translate(-50%, -50%);
-        transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
-      }
-
-      .whale {
-        position: absolute;
-        width: 60%;
-        max-width: 400px;
-        top: calc(50% + 15%);
-        left: calc(50% - 0px);
-        z-index: 3;
-      }
-
-      .text {
-        position: absolute;
-        top: calc(50% - 20%);
-        left: calc(50% - 0px);
-        z-index: 6;
-        text-align: center;
-        text-transform: uppercase;
-        color: $font-white;
-        pointer-events: auto;
-        width: 100%;
-
-        h1 {
-          font-weight: 800;
-          font-size: 6rem;
-          line-height: 1.1;
-        }
-        h2 {
-          font-weight: 100;
-          font-size: 4.5rem;
-          line-height: 1.1;
-        }
-      }
-
-      .bg {
-        display: none;
-        position: absolute;
-        width: calc(100% + 400px);
-        top: calc(50% - 100px);
-        left: calc(50% + 10px);
-        z-index: 1;
-      }
-
-      .ground {
-        display: none;
-        position: absolute;
-        width: calc(100% + 400px);
-        top: calc(50% + 500px);
-        left: calc(50% + 10px);
-        z-index: 2;
-      }
-
-      .bg-1-left {
-        display: none;
-        position: absolute;
-        width: 600px;
-        top: calc(50% - 160px);
-        left: calc(50% - 1040px);
-        z-index: 3;
-      }
-
-      .bg-2-left {
-        display: none;
-        position: absolute;
-        width: 740px;
-        top: calc(50% + 50px);
-        left: calc(50% - 920px);
-        z-index: 4;
-      }
-
-      .bg-3-left {
-        display: none;
-        position: absolute;
-        width: 1000px;
-        top: calc(50% + 400px);
-        left: calc(50% - 820px);
-        z-index: 4;
-      }
-
-      .bg-1-right {
-        display: none;
-        position: absolute;
-        width: 600px;
-        top: calc(50% - 160px);
-        left: calc(50% + 1040px);
-        z-index: 3;
-      }
-
-      .bg-2-right {
-        display: none;
-        position: absolute;
-        width: 740px;
-        top: calc(50% + 50px);
-        left: calc(50% + 1000px);
-        z-index: 4;
-      }
-
-      .bg-3-right {
-        display: none;
-        position: absolute;
-        width: 1000px;
-        top: calc(50% + 400px);
-        left: calc(50% + 820px);
-        z-index: 4;
-      }
-
-      // .sun-ray {
-      //   width: 100%;
-      //   position: absolute;
-      //   z-index: 20;
-      //   top: 0;
-      //   right: 0;
-      //   pointer-events: none;
-      // }
-
-      .vignette {
-        position: absolute;
-        z-index: 100;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: radial-gradient(
-          ellipse at center,
-          rgba(0, 0, 0, 0) 70%,
-          rgba(0, 0, 0, 0.7) 100%
-        );
-        pointer-events: none;
-      }
-    }
-    .story-section {
-      width: 100%;
-      height: 100vh;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      div {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-
-        img {
-          position: absolute;
-          max-width: 800px;
-          // border-radius: 50%;
-          z-index: 1;
-          opacity: 0.4;
-          width: 100%;
-          transform: translate(-50%, -50%);
-          left: 50%;
-          top: 50%;
-          // min-width: 600px;
-        }
-        p {
-          color: $font-black;
-          font-size: 2rem;
-          z-index: 2;
-          text-shadow: 0px 0px 4px white;
-          padding: 0 1.4rem;
-          width: 100%;
-          text-align: center;
-        }
-
-        &.story-part-1 img {
-          // left: calc(50% - 18%);
-          // top: -8%;
-        }
-        &.story-part-2 img {
-          // left: calc(50% + 12%);
-          // top: 18%;
-        }
-      }
-    }
-    .best-section {
-      margin-bottom: 10rem;
-      overflow: hidden;
-      .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between; /* 두 개의 div 사이에 여백을 고르게 분배 */
-        padding: 0 20px; /* 컨테이너의 좌우 여백 */
-        margin: 6rem 0;
-        max-width: 1200px;
-        margin: auto;
-        .best-part {
-          flex: 1; /* 각 div가 동일한 크기를 가지도록 */
-          margin: 0 3.8rem; /* 각 div 사이에 여백을 설정 */
-        }
-        .img {
-          img {
-            width: 100%;
-            max-width: 460px;
-          }
-        }
-        .text {
-          color: $font-light-gray;
-          font-size: 1.2rem;
-          h2 {
-            color: $font-black;
-            font-size: 1.8rem;
-            margin-bottom: 1.4rem;
-          }
-        }
-      }
-      .best-part-1 {
-        flex-direction: row-reverse;
-      }
-
-      @media (max-width: 600px) {
-        .container {
-          flex-direction: column; /* 작은 화면에서는 세로 방향으로 정렬 */
-          align-items: center;
-          .best-part {
-            margin: 10px 0; /* 세로 정렬 시 위아래 여백 */
-          }
-        }
-      }
-    }
-    .summary-section {
-      display: block;
-      position: relative;
-      height: 75vh;
-      overflow: hidden;
-
-      background-image: url("../img/whale-grass/summary/bg.png");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      .desc {
-        position: absolute;
-        bottom: 20%;
-        left: 50%;
-        width: 100%;
-        padding: 0 20px;
-        color: #fff;
-        text-align: center;
-        transform: translateX(-50%);
-        font-size: 1.2rem;
-        font-weight: 300;
-        .tit {
-          span {
-            font-size: 1.8rem;
-            font-weight: 400;
-          }
-          margin-bottom: 1.6rem;
-        }
-        .txt {
-        }
-      }
-    }
-  }
-
   footer {
     font-size: 1rem;
     font-weight: 300;
@@ -375,6 +100,288 @@ body {
   }
 }
 
+#hero-section {
+  position: relative;
+  // width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #178dc5;
+
+  // background-image: url("../img/whale-grass/hero/bg-mobile.jpg");
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // background-size: cover;
+
+  .parallax {
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
+  }
+
+  .whale {
+    position: absolute;
+    width: 60%;
+    max-width: 400px;
+    top: calc(50% + 15%);
+    left: calc(50% - 0px);
+    z-index: 3;
+  }
+
+  .text {
+    position: absolute;
+    top: calc(50% - 20%);
+    left: calc(50% - 0px);
+    z-index: 6;
+    text-align: center;
+    text-transform: uppercase;
+    color: $font-white;
+    pointer-events: auto;
+    width: 100%;
+
+    h1 {
+      font-weight: 800;
+      font-size: 6rem;
+      line-height: 1.1;
+    }
+    h2 {
+      font-weight: 100;
+      font-size: 4.5rem;
+      line-height: 1.1;
+    }
+  }
+
+  .bg {
+    display: none;
+    position: absolute;
+    width: calc(100% + 400px);
+    top: calc(50% - 100px);
+    left: calc(50% + 10px);
+    z-index: 1;
+  }
+
+  .bg-mobile {
+    position: absolute;
+    // width: calc(100% + 240%);
+    height: 120vh;
+    top: calc(50%);
+    left: calc(50%);
+    z-index: 1;
+  }
+
+  .ground {
+    display: none;
+    position: absolute;
+    width: calc(100% + 400px);
+    top: calc(50% + 500px);
+    left: calc(50% + 10px);
+    z-index: 2;
+  }
+
+  .bg-1-left {
+    display: none;
+    position: absolute;
+    width: 600px;
+    top: calc(50% - 160px);
+    left: calc(50% - 1040px);
+    z-index: 3;
+  }
+
+  .bg-2-left {
+    display: none;
+    position: absolute;
+    width: 740px;
+    top: calc(50% + 50px);
+    left: calc(50% - 920px);
+    z-index: 4;
+  }
+
+  .bg-3-left {
+    display: none;
+    position: absolute;
+    width: 1000px;
+    top: calc(50% + 400px);
+    left: calc(50% - 820px);
+    z-index: 4;
+  }
+
+  .bg-1-right {
+    display: none;
+    position: absolute;
+    width: 600px;
+    top: calc(50% - 160px);
+    left: calc(50% + 1040px);
+    z-index: 3;
+  }
+
+  .bg-2-right {
+    display: none;
+    position: absolute;
+    width: 740px;
+    top: calc(50% + 50px);
+    left: calc(50% + 1000px);
+    z-index: 4;
+  }
+
+  .bg-3-right {
+    display: none;
+    position: absolute;
+    width: 1000px;
+    top: calc(50% + 400px);
+    left: calc(50% + 820px);
+    z-index: 4;
+  }
+
+  // .sun-ray {
+  //   width: 100%;
+  //   position: absolute;
+  //   z-index: 20;
+  //   top: 0;
+  //   right: 0;
+  //   pointer-events: none;
+  // }
+
+  .vignette {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0) 70%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+    pointer-events: none;
+  }
+}
+
+#story-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    img {
+      position: absolute;
+      max-width: 800px;
+      // border-radius: 50%;
+      z-index: 1;
+      opacity: 0.4;
+      width: 100%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      // min-width: 600px;
+    }
+    p {
+      color: $font-black;
+      font-size: 2rem;
+      z-index: 2;
+      text-shadow: 0px 0px 4px white;
+      padding: 0 1.4rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    &.story-part-1 img {
+      // left: calc(50% - 18%);
+      // top: -8%;
+    }
+    &.story-part-2 img {
+      // left: calc(50% + 12%);
+      // top: 18%;
+    }
+  }
+}
+
+#best-section {
+  margin-bottom: 10rem;
+  overflow: hidden;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 두 개의 div 사이에 여백을 고르게 분배 */
+    padding: 0 20px; /* 컨테이너의 좌우 여백 */
+    margin: 6rem 0;
+    max-width: 1200px;
+    margin: auto;
+    .best-part {
+      flex: 1; /* 각 div가 동일한 크기를 가지도록 */
+      margin: 0 3.8rem; /* 각 div 사이에 여백을 설정 */
+    }
+    .img {
+      img {
+        width: 100%;
+        max-width: 460px;
+      }
+    }
+    .text {
+      color: $font-light-gray;
+      font-size: 1.2rem;
+      h2 {
+        color: $font-black;
+        font-size: 1.8rem;
+        margin-bottom: 1.4rem;
+      }
+    }
+  }
+  .best-part-1 {
+    flex-direction: row-reverse;
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column; /* 작은 화면에서는 세로 방향으로 정렬 */
+      align-items: center;
+      .best-part {
+        margin: 10px 0; /* 세로 정렬 시 위아래 여백 */
+      }
+    }
+  }
+}
+
+#summary-section {
+  display: block;
+  position: relative;
+  height: 75vh;
+  overflow: hidden;
+
+  background-image: url("../img/whale-grass/summary/bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  .desc {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    width: 100%;
+    padding: 0 20px;
+    color: #fff;
+    text-align: center;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    font-weight: 300;
+    .tit {
+      span {
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+      margin-bottom: 1.6rem;
+    }
+    .txt {
+    }
+  }
+}
 
 // 태블릿 디바이스 (가로 해상도가 768px 보다 큰 화면에 적용)
 @media (min-width: 768px) {
@@ -382,24 +389,23 @@ body {
   html {
     font-size: 12px;
   }
-  body {
-    main {
-      .hero-section {
-        background-image: none;
-        .bg,
-        .ground,
-        .bg-1-left,
-        .bg-2-left,
-        .bg-3-left,
-        .bg-1-right,
-        .bg-2-right,
-        .bg-3-right {
-          display: block;
-        }
-      }
+
+  #hero-section {
+    // background-image: none;
+    .bg-mobile {
+      display: none;
+    }
+    .bg,
+    .ground,
+    .bg-1-left,
+    .bg-2-left,
+    .bg-3-left,
+    .bg-1-right,
+    .bg-2-right,
+    .bg-3-right {
+      display: block;
     }
   }
-
 }
 
 // 데스크탑 (가로 해상도가 992px 보다 큰 화면에 적용)
