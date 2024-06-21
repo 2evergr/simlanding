@@ -269,7 +269,7 @@ body main .summary-section {
   position: relative;
   height: 75vh;
   overflow: hidden;
-  background-image: url("/img/whale-grass/summary/bg.png");
+  background-image: url("../img/whale-grass/summary/bg.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
