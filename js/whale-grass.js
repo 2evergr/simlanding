@@ -48,19 +48,19 @@ window.addEventListener("mousemove", (e) => {
 });
 
 /* GSAP Animation */
-// const hero_tl = gsap.timeline();
-// hero_tl.to(".hero-section", { autoAlpha: 0, duration: 1 });
+const hero_tl = gsap.timeline();
+hero_tl.to(".hero-section", { autoAlpha: 0, duration: 1 });
 
-// ScrollTrigger.create({
-//   animation: hero_tl,
-//   trigger: ".hero-section",
-//   start: "10% top",
-//   end: "80% top",
-//   scrub: true,
-//   // pin: true,
-//   // anticipatePin: 1,
-//   markers: false,
-// });
+ScrollTrigger.create({
+  animation: hero_tl,
+  trigger: ".hero-section",
+  start: "10% top",
+  end: "80% top",
+  scrub: true,
+  // pin: true,
+  // anticipatePin: 1,
+  markers: false,
+});
 
 const story_tl = gsap.timeline({
   scrollTrigger: {
@@ -93,7 +93,7 @@ const best_tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".best-section",
     start: "top bottom",
-    end: "bottom 10%",
+    end: "+=6000",
     markers: false,
     id: 'best-section'
   },

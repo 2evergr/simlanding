@@ -13,12 +13,11 @@
   word-break: keep-all;
 }
 
-@media (max-width: 600px) {
-  html {
-    font-size: 12px;
-    position: relative;
-  }
+:root,
+html {
+  font-size: 10px;
 }
+
 body {
   font-family: "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
@@ -43,7 +42,7 @@ body header nav {
   align-items: center;
 }
 body header nav .logo {
-  width: 80px;
+  width: 5rem;
   padding: 0 10px;
   display: flex;
   align-items: center;
@@ -66,20 +65,54 @@ body header nav ul li a {
   text-decoration: none;
   color: #ffffff;
   font-weight: 300;
-  font-size: 0.83rem;
+  font-size: 0.9rem;
 }
 body main .hero-section {
   position: relative;
   height: 100vh;
   overflow: hidden;
   background-color: #178dc5;
+  background-image: url("../img/whale-grass/hero/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 body main .hero-section .parallax {
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
 }
+body main .hero-section .whale {
+  position: absolute;
+  width: 60%;
+  max-width: 400px;
+  top: 65%;
+  left: calc(50% - 0px);
+  z-index: 3;
+}
+body main .hero-section .text {
+  position: absolute;
+  top: 30%;
+  left: calc(50% - 0px);
+  z-index: 6;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  pointer-events: auto;
+  width: 100%;
+}
+body main .hero-section .text h1 {
+  font-weight: 800;
+  font-size: 6rem;
+  line-height: 1.1;
+}
+body main .hero-section .text h2 {
+  font-weight: 100;
+  font-size: 4.5rem;
+  line-height: 1.1;
+}
 body main .hero-section .bg {
+  display: none;
   position: absolute;
   width: calc(100% + 400px);
   top: calc(50% - 100px);
@@ -87,6 +120,7 @@ body main .hero-section .bg {
   z-index: 1;
 }
 body main .hero-section .ground {
+  display: none;
   position: absolute;
   width: calc(100% + 400px);
   top: calc(50% + 500px);
@@ -94,6 +128,7 @@ body main .hero-section .ground {
   z-index: 2;
 }
 body main .hero-section .bg-1-left {
+  display: none;
   position: absolute;
   width: 600px;
   top: calc(50% - 160px);
@@ -101,6 +136,7 @@ body main .hero-section .bg-1-left {
   z-index: 3;
 }
 body main .hero-section .bg-2-left {
+  display: none;
   position: absolute;
   width: 740px;
   top: calc(50% + 50px);
@@ -108,6 +144,7 @@ body main .hero-section .bg-2-left {
   z-index: 4;
 }
 body main .hero-section .bg-3-left {
+  display: none;
   position: absolute;
   width: 1000px;
   top: calc(50% + 400px);
@@ -115,6 +152,7 @@ body main .hero-section .bg-3-left {
   z-index: 4;
 }
 body main .hero-section .bg-1-right {
+  display: none;
   position: absolute;
   width: 600px;
   top: calc(50% - 160px);
@@ -122,6 +160,7 @@ body main .hero-section .bg-1-right {
   z-index: 3;
 }
 body main .hero-section .bg-2-right {
+  display: none;
   position: absolute;
   width: 740px;
   top: calc(50% + 50px);
@@ -129,46 +168,12 @@ body main .hero-section .bg-2-right {
   z-index: 4;
 }
 body main .hero-section .bg-3-right {
+  display: none;
   position: absolute;
   width: 1000px;
   top: calc(50% + 400px);
   left: calc(50% + 820px);
   z-index: 4;
-}
-body main .hero-section .whale {
-  position: absolute;
-  width: 800px;
-  top: calc(50% + 30px);
-  left: calc(50% - 0px);
-  z-index: 3;
-}
-body main .hero-section .text {
-  position: absolute;
-  top: calc(50% - 160px);
-  left: calc(50% - 0px);
-  z-index: 6;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  pointer-events: auto;
-}
-body main .hero-section .text h1 {
-  font-weight: 800;
-  font-size: 8rem;
-  line-height: 1.1;
-}
-body main .hero-section .text h2 {
-  font-weight: 100;
-  font-size: 6.5rem;
-  line-height: 1.1;
-}
-body main .hero-section .sun-ray {
-  width: 100%;
-  position: absolute;
-  z-index: 20;
-  top: 0;
-  right: 0;
-  pointer-events: none;
 }
 body main .hero-section .vignette {
   position: absolute;
@@ -198,31 +203,24 @@ body main .story-section div {
 }
 body main .story-section div img {
   position: absolute;
+  max-width: 800px;
   z-index: 1;
   opacity: 0.4;
-  width: 80%;
-  left: 50%;
+  width: 100%;
   transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
 }
 body main .story-section div p {
   color: #1A1A1A;
-  font-size: 2.4rem;
+  font-size: 2rem;
   z-index: 2;
   text-shadow: 0px 0px 4px white;
   padding: 0 1.4rem;
   width: 100%;
   text-align: center;
 }
-body main .story-section div.story-part-1 img {
-  left: 32%;
-  top: -8%;
-}
-body main .story-section div.story-part-2 img {
-  left: 62%;
-  top: 18%;
-}
 body main .best-section {
-  height: 100vh;
   margin-bottom: 10rem;
   overflow: hidden;
 }
@@ -315,6 +313,38 @@ body footer .company-info {
 }
 body footer .copyright {
   font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  :root,
+  html {
+    font-size: 12px;
+  }
+  body main .hero-section {
+    background-image: none;
+  }
+  body main .hero-section .bg,
+  body main .hero-section .ground,
+  body main .hero-section .bg-1-left,
+  body main .hero-section .bg-2-left,
+  body main .hero-section .bg-3-left,
+  body main .hero-section .bg-1-right,
+  body main .hero-section .bg-2-right,
+  body main .hero-section .bg-3-right {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  :root,
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  :root,
+  html {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

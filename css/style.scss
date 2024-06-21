@@ -13,12 +13,11 @@
   word-break: keep-all;
 }
 
-@media (max-width: 600px) {
-  html {
-    font-size: 12px;
-    position: relative;
-  }
+:root,
+html {
+  font-size: 10px;
 }
+
 
 body {
   // font-size: clamp(0.6rem, 2.5vw, 2rem);
@@ -45,7 +44,7 @@ body {
       align-items: center;
 
       .logo {
-        width: 80px;
+        width: 5rem;
         padding: 0 10px;
         display: flex;
         align-items: center;
@@ -67,7 +66,7 @@ body {
             text-decoration: none;
             color: $font-white;
             font-weight: 300;
-            font-size: 0.83rem;
+            font-size: 0.9rem;
           }
         }
       }
@@ -82,13 +81,51 @@ body {
       overflow: hidden;
       background-color: #178dc5;
 
+      background-image: url("../img/whale-grass/hero/bg-mobile.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+
       .parallax {
         pointer-events: none;
         transform: translate(-50%, -50%);
         transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
       }
 
+      .whale {
+        position: absolute;
+        width: 60%;
+        max-width: 400px;
+        top: calc(50% + 15%);
+        left: calc(50% - 0px);
+        z-index: 3;
+      }
+
+      .text {
+        position: absolute;
+        top: calc(50% - 20%);
+        left: calc(50% - 0px);
+        z-index: 6;
+        text-align: center;
+        text-transform: uppercase;
+        color: $font-white;
+        pointer-events: auto;
+        width: 100%;
+
+        h1 {
+          font-weight: 800;
+          font-size: 6rem;
+          line-height: 1.1;
+        }
+        h2 {
+          font-weight: 100;
+          font-size: 4.5rem;
+          line-height: 1.1;
+        }
+      }
+
       .bg {
+        display: none;
         position: absolute;
         width: calc(100% + 400px);
         top: calc(50% - 100px);
@@ -97,6 +134,7 @@ body {
       }
 
       .ground {
+        display: none;
         position: absolute;
         width: calc(100% + 400px);
         top: calc(50% + 500px);
@@ -105,6 +143,7 @@ body {
       }
 
       .bg-1-left {
+        display: none;
         position: absolute;
         width: 600px;
         top: calc(50% - 160px);
@@ -113,6 +152,7 @@ body {
       }
 
       .bg-2-left {
+        display: none;
         position: absolute;
         width: 740px;
         top: calc(50% + 50px);
@@ -121,6 +161,7 @@ body {
       }
 
       .bg-3-left {
+        display: none;
         position: absolute;
         width: 1000px;
         top: calc(50% + 400px);
@@ -129,6 +170,7 @@ body {
       }
 
       .bg-1-right {
+        display: none;
         position: absolute;
         width: 600px;
         top: calc(50% - 160px);
@@ -137,6 +179,7 @@ body {
       }
 
       .bg-2-right {
+        display: none;
         position: absolute;
         width: 740px;
         top: calc(50% + 50px);
@@ -145,6 +188,7 @@ body {
       }
 
       .bg-3-right {
+        display: none;
         position: absolute;
         width: 1000px;
         top: calc(50% + 400px);
@@ -152,44 +196,15 @@ body {
         z-index: 4;
       }
 
-      .whale {
-        position: absolute;
-        width: 800px;
-        top: calc(50% + 30px);
-        left: calc(50% - 0px);
-        z-index: 3;
-      }
+      // .sun-ray {
+      //   width: 100%;
+      //   position: absolute;
+      //   z-index: 20;
+      //   top: 0;
+      //   right: 0;
+      //   pointer-events: none;
+      // }
 
-      .text {
-        position: absolute;
-        top: calc(50% - 160px);
-        left: calc(50% - 0px);
-        z-index: 6;
-        text-align: center;
-        text-transform: uppercase;
-        color: $font-white;
-        pointer-events: auto;
-
-        h1 {
-          font-weight: 800;
-          font-size: 8rem;
-          line-height: 1.1;
-        }
-        h2 {
-          font-weight: 100;
-          font-size: 6.5rem;
-          line-height: 1.1;
-        }
-      }
-
-      .sun-ray {
-        width: 100%;
-        position: absolute;
-        z-index: 20;
-        top: 0;
-        right: 0;
-        pointer-events: none;
-      }
       .vignette {
         position: absolute;
         z-index: 100;
@@ -222,19 +237,19 @@ body {
 
         img {
           position: absolute;
-          // max-width: 1200px;
+          max-width: 800px;
           // border-radius: 50%;
           z-index: 1;
           opacity: 0.4;
-          width: 80%;
-          left: 50%;
-          // top: 50%;
+          width: 100%;
           transform: translate(-50%, -50%);
+          left: 50%;
+          top: 50%;
           // min-width: 600px;
         }
         p {
           color: $font-black;
-          font-size: 2.4rem;
+          font-size: 2rem;
           z-index: 2;
           text-shadow: 0px 0px 4px white;
           padding: 0 1.4rem;
@@ -243,17 +258,16 @@ body {
         }
 
         &.story-part-1 img {
-          left: calc(50% - 18%);
-          top: -8%;
+          // left: calc(50% - 18%);
+          // top: -8%;
         }
         &.story-part-2 img {
-          left: calc(50% + 12%);
-          top: 18%;
+          // left: calc(50% + 12%);
+          // top: 18%;
         }
       }
     }
     .best-section {
-      height: 100vh;
       margin-bottom: 10rem;
       overflow: hidden;
       .container {
@@ -358,5 +372,48 @@ body {
     .copyright {
       font-size: 0.8rem;
     }
+  }
+}
+
+
+// 태블릿 디바이스 (가로 해상도가 768px 보다 큰 화면에 적용)
+@media (min-width: 768px) {
+  :root,
+  html {
+    font-size: 12px;
+  }
+  body {
+    main {
+      .hero-section {
+        background-image: none;
+        .bg,
+        .ground,
+        .bg-1-left,
+        .bg-2-left,
+        .bg-3-left,
+        .bg-1-right,
+        .bg-2-right,
+        .bg-3-right {
+          display: block;
+        }
+      }
+    }
+  }
+
+}
+
+// 데스크탑 (가로 해상도가 992px 보다 큰 화면에 적용)
+@media (min-width: 992px) {
+  :root,
+  html {
+    font-size: 14px;
+  }
+}
+
+// 큰화면 데스크탑 (가로 해상도가 1200px 보다 큰 화면에 적용)
+@media (min-width: 1200px) {
+  :root,
+  html {
+    font-size: 16px;
   }
 }
