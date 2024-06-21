@@ -2,7 +2,6 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,vs,node
 ### Sass ###
 .sass-cache/
-*.css.map
 *.sass.map
 *.scss.map
 
