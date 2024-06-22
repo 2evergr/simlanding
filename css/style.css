@@ -221,25 +221,34 @@ body footer .copyright {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background-image: url("../img/whale-grass/story/bg-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 }
-#story-section div {
+#story-section .story-part {
   position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
 }
-#story-section div img {
+#story-section .story-part .img {
   position: absolute;
-  max-width: 800px;
   z-index: 1;
-  opacity: 0.4;
   width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#story-section .story-part .img img {
+  max-width: 800px;
+  width: 60%;
+}
+#story-section .story-part p {
+  position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
-}
-#story-section div p {
   color: #1A1A1A;
   font-size: 2rem;
   z-index: 2;
@@ -248,6 +257,19 @@ body footer .copyright {
   width: 100%;
   text-align: center;
 }
+#story-section .part-1 .img {
+  top: 36%;
+  left: 30%;
+}
+#story-section .part-2 .img {
+  top: 64%;
+  left: 70%;
+}
+#story-section .part-3 .img {
+  top: 50%;
+  left: 50%;
+}
+
 #best-section {
   margin-bottom: 10rem;
   overflow: hidden;

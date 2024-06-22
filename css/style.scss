@@ -264,26 +264,40 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  div {
+
+  background-image: url("../img/whale-grass/story/bg-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  .story-part {
     position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
 
-    img {
+    .img {
       position: absolute;
-      max-width: 800px;
       // border-radius: 50%;
       z-index: 1;
-      opacity: 0.4;
+      // opacity: 0.4;
       width: 100%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      // left: 50%;
+      // top: 50%;
+      // min-width: 600px;
+      img {
+        max-width: 800px;
+        width: 60%;
+      }
+    }
+    p {
+      position: absolute;
       transform: translate(-50%, -50%);
       left: 50%;
       top: 50%;
-      // min-width: 600px;
-    }
-    p {
       color: $font-black;
       font-size: 2rem;
       z-index: 2;
@@ -292,15 +306,18 @@ body {
       width: 100%;
       text-align: center;
     }
-
-    &.story-part-1 img {
-      // left: calc(50% - 18%);
-      // top: -8%;
-    }
-    &.story-part-2 img {
-      // left: calc(50% + 12%);
-      // top: 18%;
-    }
+  }
+  .part-1 .img {
+    top: 36%;
+    left: 30%;
+  }
+  .part-2 .img {
+    top: 64%;
+    left: 70%;
+  }
+  .part-3 .img {
+    top: 50%;
+    left: 50%;
   }
 }
 

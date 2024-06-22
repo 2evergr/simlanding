@@ -76,18 +76,20 @@ const story_tl = gsap.timeline({
 });
 
 story_tl
-  .fromTo(".story-part-1 p", { autoAlpha: 0, duration: 1, y: 200 }, { autoAlpha: 1, duration: 1, y: 0 }, 0)
-  .fromTo(".story-part-1 img", { autoAlpha: 0, duration: 1, y: 40 }, { autoAlpha: 0.6, duration: 1, y: 0 }, 0)
-  .to(".story-part-1 p", { autoAlpha: 0, duration: 1, y: -200 })
-  .to(".story-part-1 img", { autoAlpha: 0, duration: 1, y: -40 }, "<")
-  .fromTo(".story-part-2 p", { autoAlpha: 0, duration: 1, y: 200 }, { autoAlpha: 1, duration: 1, y: 0 }, 2)
-  .fromTo(".story-part-2 img", { autoAlpha: 0, duration: 1, y: 80 }, { autoAlpha: 0.6, duration: 1, y: 0 }, 2)
-  .to(".story-part-2 p", { autoAlpha: 0, duration: 1, y: -200 })
-  .to(".story-part-2 img", { autoAlpha: 0, duration: 1, y: -80 }, "<")
-  .fromTo(".story-part-3 p", { autoAlpha: 0, duration: 1, y: 200 }, { autoAlpha: 1, duration: 1, y: 0 }, 4)
-  .fromTo(".story-part-3 img", { autoAlpha: 0, duration: 1, y: 80 }, { autoAlpha: 0.6, duration: 1, y: 0 }, 4)
-  .to(".story-part-3 p", { autoAlpha: 0, duration: 1, y: -200 })
-  .to(".story-part-3 img", { autoAlpha: 0, duration: 1, y: -80 }, "<");
+  .from("#story-section", { autoAlpha: 0, duration: 1 })
+  .fromTo(".part-1 p", { autoAlpha: 0, duration: 1, y: 200 }, { autoAlpha: 1, duration: 1, y: 0 }, 0)
+  .fromTo(".part-1 .img", { autoAlpha: 0, duration: 1, y: 40 }, { autoAlpha: 1, duration: 1, y: 0 }, 0)
+  .to(".part-1 p", { autoAlpha: 0, duration: 1, y: -200 })
+  .to(".part-1 .img", { autoAlpha: 0, duration: 1, y: -40 }, "<")
+  .fromTo(".part-2 p", { autoAlpha: 0, duration: 1, y: 200 }, { autoAlpha: 1, duration: 1, y: 0 }, 2)
+  .fromTo(".part-2 .img", { autoAlpha: 0, duration: 1, y: 80 }, { autoAlpha: 1, duration: 1, y: 0 }, 2)
+  .to(".part-2 p", { autoAlpha: 0, duration: 1, y: -200 })
+  .to(".part-2 .img", { autoAlpha: 0, duration: 1, y: -80 }, "<")
+  .fromTo(".part-3 p", { autoAlpha: 0, duration: 1, y: 200 }, { autoAlpha: 1, duration: 1, y: 0 }, 4)
+  .fromTo(".part-3 .img", { autoAlpha: 0, duration: 1, y: 80 }, { autoAlpha: 1, duration: 1, y: 0 }, 4)
+  .to(".part-3 p", { autoAlpha: 0, duration: 1, y: -200 })
+  .to(".part-3 .img", { autoAlpha: 0, duration: 1, y: -80 }, "<")
+  .to("#story-section", { autoAlpha: 0, duration: 1}, "<");
 
 const best_tl = gsap.timeline({
   scrollTrigger: {
