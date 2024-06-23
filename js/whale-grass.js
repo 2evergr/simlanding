@@ -89,7 +89,8 @@ story_tl
   .fromTo(".part-3 .img", { autoAlpha: 0, duration: 1, y: 80 }, { autoAlpha: 1, duration: 1, y: 0 }, 4)
   .to(".part-3 p", { autoAlpha: 0, duration: 1, y: -200 })
   .to(".part-3 .img", { autoAlpha: 0, duration: 1, y: -80 }, "<")
-  .to("#story-section", { autoAlpha: 0, duration: 1}, "<");
+  .to("#story-section", { autoAlpha: 0, duration: 1}, "<")
+  ;
 
 const best_tl = gsap.timeline({
   scrollTrigger: {
