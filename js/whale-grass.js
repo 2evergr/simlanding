@@ -77,20 +77,49 @@ const story_tl = gsap.timeline({
 
 story_tl
   .from("#story-section", { autoAlpha: 0, duration: 1 })
-  .fromTo(".part-1 p", { autoAlpha: 0, duration: 1, y: 200 }, { autoAlpha: 1, duration: 1, y: 0 }, 0)
-  .fromTo(".part-1 .img", { autoAlpha: 0, duration: 1, y: 40 }, { autoAlpha: 1, duration: 1, y: 0 }, 0)
+  .fromTo(
+    ".part-1 p",
+    { autoAlpha: 0, duration: 1, y: 200 },
+    { autoAlpha: 1, duration: 1, y: 0 },
+    0
+  )
+  .fromTo(
+    ".part-1 .img",
+    { autoAlpha: 0, duration: 1, y: 40 },
+    { autoAlpha: 1, duration: 1, y: 0 },
+    0
+  )
   .to(".part-1 p", { autoAlpha: 0, duration: 1, y: -200 })
   .to(".part-1 .img", { autoAlpha: 0, duration: 1, y: -40 }, "<")
-  .fromTo(".part-2 p", { autoAlpha: 0, duration: 1, y: 200 }, { autoAlpha: 1, duration: 1, y: 0 }, 2)
-  .fromTo(".part-2 .img", { autoAlpha: 0, duration: 1, y: 80 }, { autoAlpha: 1, duration: 1, y: 0 }, 2)
+  .fromTo(
+    ".part-2 p",
+    { autoAlpha: 0, duration: 1, y: 200 },
+    { autoAlpha: 1, duration: 1, y: 0 },
+    2
+  )
+  .fromTo(
+    ".part-2 .img",
+    { autoAlpha: 0, duration: 1, y: 80 },
+    { autoAlpha: 1, duration: 1, y: 0 },
+    2
+  )
   .to(".part-2 p", { autoAlpha: 0, duration: 1, y: -200 })
   .to(".part-2 .img", { autoAlpha: 0, duration: 1, y: -80 }, "<")
-  .fromTo(".part-3 p", { autoAlpha: 0, duration: 1, y: 200 }, { autoAlpha: 1, duration: 1, y: 0 }, 4)
-  .fromTo(".part-3 .img", { autoAlpha: 0, duration: 1, y: 80 }, { autoAlpha: 1, duration: 1, y: 0 }, 4)
+  .fromTo(
+    ".part-3 p",
+    { autoAlpha: 0, duration: 1, y: 200 },
+    { autoAlpha: 1, duration: 1, y: 0 },
+    4
+  )
+  .fromTo(
+    ".part-3 .img",
+    { autoAlpha: 0, duration: 1, y: 80 },
+    { autoAlpha: 1, duration: 1, y: 0 },
+    4
+  )
   .to(".part-3 p", { autoAlpha: 0, duration: 1, y: -200 })
   .to(".part-3 .img", { autoAlpha: 0, duration: 1, y: -80 }, "<")
-  .to("#story-section", { autoAlpha: 0, duration: 1}, "<")
-  ;
+  .to("#story-section", { autoAlpha: 0, duration: 1 }, "<");
 
 const best_tl = gsap.timeline({
   scrollTrigger: {
@@ -98,12 +127,26 @@ const best_tl = gsap.timeline({
     start: "top bottom",
     end: "+=6000",
     markers: false,
-    id: 'best-section'
+    id: "best-section",
   },
 });
 
 best_tl
-.from(".best-part-1 .img", { autoAlpha: 0, duration: 1, x: 600 })
-.from(".best-part-1 .text", { autoAlpha: 0, duration: 1, y: 400 }, "<")
-.from(".best-part-2 .img", { autoAlpha: 0, duration: 1, x: -600 }, "<")
-.from(".best-part-2 .text", { autoAlpha: 0, duration: 1, y: 400 }, "<");
+  .from(".best-part-1 .img", { autoAlpha: 0, duration: 1, x: 600 })
+  .from(".best-part-1 .text", { autoAlpha: 0, duration: 1, y: 400 }, "<")
+  .from(".best-part-2 .img", { autoAlpha: 0, duration: 1, x: -600 }, "<")
+  .from(".best-part-2 .text", { autoAlpha: 0, duration: 1, y: 400 }, "<");
+
+
+const summary_tl = gsap.timeline({  
+  scrollTrigger: {
+    trigger: "#summary-section",
+    start: "top bottom",
+    end: "bottom bottom",
+    markers: false,
+    scrub: true,
+    id: "summary-section",
+  },
+});
+
+summary_tl.to(".scroll-down", { opacity: 0 });
