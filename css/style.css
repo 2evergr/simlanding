@@ -286,8 +286,9 @@ body footer .copyright {
 }
 
 #story-section {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   width: 100%;
-  height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
