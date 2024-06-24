@@ -78,8 +78,8 @@ const story_tl = gsap.timeline({
 story_tl
   .from("#story-section", { autoAlpha: 0, duration: 1 })
   .fromTo(
-    ".part-1 p",
-    { autoAlpha: 0, duration: 1, y: 200 },
+    ".part-1 .text",
+    { autoAlpha: 0, duration: 1, y: 100 },
     { autoAlpha: 1, duration: 1, y: 0 },
     0
   )
@@ -89,36 +89,36 @@ story_tl
     { autoAlpha: 1, duration: 1, y: 0 },
     0
   )
-  .to(".part-1 p", { autoAlpha: 0, duration: 1, y: -200 })
+  .to(".part-1 .text", { autoAlpha: 0, duration: 1, y: -40 })
   .to(".part-1 .img", { autoAlpha: 0, duration: 1, y: -40 }, "<")
   .fromTo(
-    ".part-2 p",
-    { autoAlpha: 0, duration: 1, y: 200 },
+    ".part-2 .text",
+    { autoAlpha: 0, duration: 1, y: 100 },
     { autoAlpha: 1, duration: 1, y: 0 },
     2
   )
   .fromTo(
     ".part-2 .img",
-    { autoAlpha: 0, duration: 1, y: 80 },
+    { autoAlpha: 0, duration: 1, y: 40 },
     { autoAlpha: 1, duration: 1, y: 0 },
     2
   )
-  .to(".part-2 p", { autoAlpha: 0, duration: 1, y: -200 })
-  .to(".part-2 .img", { autoAlpha: 0, duration: 1, y: -80 }, "<")
+  .to(".part-2 .text", { autoAlpha: 0, duration: 1, y: -40 })
+  .to(".part-2 .img", { autoAlpha: 0, duration: 1, y: -40 }, "<")
   .fromTo(
-    ".part-3 p",
-    { autoAlpha: 0, duration: 1, y: 200 },
+    ".part-3 .text",
+    { autoAlpha: 0, duration: 1, y: 100 },
     { autoAlpha: 1, duration: 1, y: 0 },
     4
   )
   .fromTo(
     ".part-3 .img",
-    { autoAlpha: 0, duration: 1, y: 80 },
+    { autoAlpha: 0, duration: 1, y: 40 },
     { autoAlpha: 1, duration: 1, y: 0 },
     4
   )
-  .to(".part-3 p", { autoAlpha: 0, duration: 1, y: -200 })
-  .to(".part-3 .img", { autoAlpha: 0, duration: 1, y: -80 }, "<")
+  .to(".part-3 .text", { autoAlpha: 0, duration: 1, y: -40 })
+  .to(".part-3 .img", { autoAlpha: 0, duration: 1, y: -40 }, "<")
   .to("#story-section", { autoAlpha: 0, duration: 1 }, "<");
 
 const best_tl = gsap.timeline({
