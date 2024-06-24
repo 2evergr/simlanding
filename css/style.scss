@@ -47,7 +47,7 @@ body {
       align-items: center;
 
       .logo {
-        width: 5rem;
+        width: 6rem;
         padding: 0 10px;
         display: flex;
         align-items: center;
@@ -69,7 +69,7 @@ body {
             text-decoration: none;
             color: $font-white;
             font-weight: 300;
-            font-size: 0.9rem;
+            font-size: 1.2rem;
           }
         }
       }
@@ -345,7 +345,7 @@ body {
   background-image: url("../img/whale-grass/story/bg-1.png");
   background-repeat: no-repeat;
   background-position: center top 5%;
-  background-size: min(100%, 70vh);
+  background-size: min(100%, 60vh);
 
   .story-part {
     position: absolute;
@@ -369,11 +369,11 @@ body {
       position: absolute;
       transform: translate(-50%, -50%);
       left: 50%;
-      top: max(75%, 70vh);
+      top: 70%;
       color: $font-black;
       font-size: 1.8rem;
       z-index: 2;
-      text-shadow: 0px 0px 2px white;
+      text-shadow: 0px 0px 4px white;
       padding: 0 1.4rem;
       width: 100%;
       text-align: center;
@@ -480,6 +480,11 @@ body {
   }
 }
 
+br.break-t {
+  display: none;
+}
+
+
 // 태블릿 디바이스 (가로 해상도가 768px 보다 큰 화면에 적용)
 @media (min-width: 768px) {
   :root,
@@ -487,10 +492,20 @@ body {
     font-size: 12px;
   }
 
+  br.break-m {
+    display: none;
+  }
+  br.break-t {
+    display: inline;
+  }
+
   #hero-section {
     // background-image: none;
     .bg-mobile {
       display: none;
+    }
+    .bg {
+      height: 130vh;
     }
     .bg,
     .ground,
@@ -510,6 +525,10 @@ body {
   :root,
   html {
     font-size: 14px;
+  }
+
+  br.break-t {
+    display: none;
   }
 }
 

@@ -46,7 +46,7 @@ body header nav {
   align-items: center;
 }
 body header nav .logo {
-  width: 5rem;
+  width: 6rem;
   padding: 0 10px;
   display: flex;
   align-items: center;
@@ -69,7 +69,7 @@ body header nav ul li a {
   text-decoration: none;
   color: #ffffff;
   font-weight: 300;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 body footer {
   font-size: 1rem;
@@ -296,7 +296,7 @@ body footer .copyright {
   background-image: url("../img/whale-grass/story/bg-1.png");
   background-repeat: no-repeat;
   background-position: center top 5%;
-  background-size: min(100%, 70vh);
+  background-size: min(100%, 60vh);
 }
 #story-section .story-part {
   position: absolute;
@@ -320,11 +320,11 @@ body footer .copyright {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: max(75%, 70vh);
+  top: 70%;
   color: #1A1A1A;
   font-size: 1.8rem;
   z-index: 2;
-  text-shadow: 0px 0px 2px white;
+  text-shadow: 0px 0px 4px white;
   padding: 0 1.4rem;
   width: 100%;
   text-align: center;
@@ -416,13 +416,26 @@ body footer .copyright {
   font-size: 1.8rem;
   font-weight: 400;
 }
+br.break-t {
+  display: none;
+}
+
 @media (min-width: 768px) {
   :root,
   html {
     font-size: 12px;
   }
+  br.break-m {
+    display: none;
+  }
+  br.break-t {
+    display: inline;
+  }
   #hero-section .bg-mobile {
     display: none;
+  }
+  #hero-section .bg {
+    height: 130vh;
   }
   #hero-section .bg,
   #hero-section .ground,
@@ -439,6 +452,9 @@ body footer .copyright {
   :root,
   html {
     font-size: 14px;
+  }
+  br.break-t {
+    display: none;
   }
 }
 @media (min-width: 1200px) {
