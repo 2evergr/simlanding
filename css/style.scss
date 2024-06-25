@@ -436,12 +436,13 @@ br.break-t {
       flex: 1; /* 각 div가 동일한 크기를 가지도록 */
       margin: 0 3.8rem; /* 각 div 사이에 여백을 설정 */
       margin: 10px 0; /* 세로 정렬 시 위아래 여백 */
+      width: 100%;
     }
 
     .img {
       img {
         width: 100%;
-        max-width: 480px;
+        // max-width: 542px;
       }
     }
     .text {
@@ -500,6 +501,7 @@ br.break-t {
   br.break-m {
     display: none;
   }
+  
   br.break-t {
     display: inline;
   }
@@ -523,6 +525,7 @@ br.break-t {
       display: block;
     }
   }
+  
   #story-section {
     background-image: url("../img/whale-grass/story/bg.png");
     background-repeat: no-repeat;
@@ -538,6 +541,11 @@ br.break-t {
       }
       .best-part {
         padding: 0 1.2rem;
+      }
+      .img {
+        img {
+          max-width: 542px;
+        }
       }
     }
   }

@@ -371,10 +371,10 @@ br.break-t {
   flex: 1; /* 각 div가 동일한 크기를 가지도록 */
   margin: 0 3.8rem; /* 각 div 사이에 여백을 설정 */
   margin: 10px 0; /* 세로 정렬 시 위아래 여백 */
+  width: 100%;
 }
 #best-section .container .img img {
   width: 100%;
-  max-width: 480px;
 }
 #best-section .container .text {
   color: #828282;
@@ -457,6 +457,9 @@ br.break-t {
   }
   #best-section .container .best-part {
     padding: 0 1.2rem;
+  }
+  #best-section .container .img img {
+    max-width: 542px;
   }
 }
 @media (min-width: 992px) {
