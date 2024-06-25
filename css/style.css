@@ -22,6 +22,10 @@ h2 {
   font-size: 2.4rem;
 }
 
+h3 {
+  font-size: 2rem;
+}
+
 body {
   font-family: "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
@@ -349,44 +353,35 @@ body footer .copyright {
   display: flex;
   align-items: center;
   justify-content: space-between; /* 두 개의 div 사이에 여백을 고르게 분배 */
+  flex-direction: column; /* 작은 화면에서는 세로 방향으로 정렬 */
   padding: 0 20px; /* 컨테이너의 좌우 여백 */
-  margin: 6rem 0;
+  margin: 10px auto 2.4rem auto; /* 세로 정렬 시 위아래 여백 */
   max-width: 1200px;
-  margin: auto;
 }
 #best-section .container.title {
   text-align: center;
   justify-content: center;
-  margin-bottom: 2.4rem;
+  margin-bottom: 4rem;
 }
 #best-section .container .best-part {
   flex: 1; /* 각 div가 동일한 크기를 가지도록 */
   margin: 0 3.8rem; /* 각 div 사이에 여백을 설정 */
+  margin: 10px 0; /* 세로 정렬 시 위아래 여백 */
+  padding: 0 1.2rem;
 }
 #best-section .container .img img {
   width: 100%;
-  max-width: 460px;
+  max-width: 480px;
 }
 #best-section .container .text {
   color: #828282;
   font-size: 1.2rem;
+  width: 100%;
 }
-#best-section .container .text h2 {
+#best-section .container .text h3 {
   color: #1A1A1A;
   font-size: 1.8rem;
-  margin-bottom: 1.4rem;
-}
-#best-section .best-part-1 {
-  flex-direction: row-reverse;
-}
-@media (max-width: 600px) {
-  #best-section .container {
-    flex-direction: column; /* 작은 화면에서는 세로 방향으로 정렬 */
-    align-items: center;
-  }
-  #best-section .container .best-part {
-    margin: 10px 0; /* 세로 정렬 시 위아래 여백 */
-  }
+  margin-bottom: 1.2rem;
 }
 
 #summary-section {
@@ -454,6 +449,12 @@ br.break-t {
     background-repeat: no-repeat;
     background-position: center top 5%;
     background-size: 120vh;
+  }
+  #best-section .container {
+    flex-direction: row;
+  }
+  #best-section .container.best-part-1 {
+    flex-direction: row-reverse;
   }
 }
 @media (min-width: 992px) {
