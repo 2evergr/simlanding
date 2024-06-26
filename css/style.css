@@ -195,14 +195,14 @@ br.break-t {
 #hero-section .whale {
   position: absolute;
   width: 70%;
-  max-width: 400px;
-  top: 60%;
+  max-width: 600px;
+  top: calc(50% + 4vh);
   left: calc(50% - 0px);
   z-index: 3;
 }
 #hero-section .text {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: calc(50% - 0px);
   z-index: 6;
   text-align: center;
@@ -214,12 +214,12 @@ br.break-t {
 #hero-section .text h1 {
   font-weight: 800;
   font-size: 6rem;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 #hero-section .text h2 {
-  font-weight: 100;
+  font-weight: 200;
   font-size: 4.5rem;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 #hero-section .bg {
   display: none;

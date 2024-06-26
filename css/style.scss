@@ -2,6 +2,7 @@
 @import "colors";
 
 // START - Global part
+// Notice - mobile first
 *,
 *::before,
 *::after {
@@ -224,15 +225,15 @@ br.break-t {
   .whale {
     position: absolute;
     width: 70%;
-    max-width: 400px;
-    top: calc(50% + 10%);
+    max-width: 600px;
+    top: calc(50% + 4vh);
     left: calc(50% - 0px);
     z-index: 3;
   }
 
   .text {
     position: absolute;
-    top: calc(50% - 20%);
+    top: calc(50% - 25%);
     left: calc(50% - 0px);
     z-index: 6;
     text-align: center;
@@ -244,12 +245,12 @@ br.break-t {
     h1 {
       font-weight: 800;
       font-size: 6rem;
-      line-height: 1.1;
+      line-height: 1.2;
     }
     h2 {
-      font-weight: 100;
+      font-weight: 200;
       font-size: 4.5rem;
-      line-height: 1.1;
+      line-height: 1.2;
     }
   }
 
