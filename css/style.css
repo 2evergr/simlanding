@@ -82,18 +82,30 @@ body footer {
   background-color: #1b1b1b;
   padding: 2rem 1.4rem;
 }
+body footer a {
+  color: white;
+  text-decoration: none;
+}
+body footer a:hover {
+  text-decoration: underline;
+}
 body footer div {
   margin-bottom: 1.4rem;
 }
 body footer .company-title {
+  font-size: 1.4rem;
   font-weight: 400;
 }
 body footer .company-info {
-  font-size: 0.8rem;
-  line-height: 1.38;
+  line-height: 1.8rem;
+  padding-bottom: 1.4rem;
   letter-spacing: normal;
   color: #fffef1;
   border-bottom: solid 1px #dddcd1;
+}
+body footer .company-info strong {
+  font-weight: 400;
+  margin-right: 0.4rem;
 }
 body footer .copyright {
   font-size: 0.8rem;
