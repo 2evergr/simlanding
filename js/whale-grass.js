@@ -1,13 +1,6 @@
-// 모바일에서 스크롤이 길어질 경우 하단 주소창이 사라지는 등 vh 값이 변동되는 문제 해결을 위해 처리한 부분
-ScrollTrigger.config({
-  autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
-});
-// ScrollTrigger config 설정
-gsap.registerPlugin(ScrollTrigger);
-
 const parallax_els = document.querySelectorAll(".parallax");
-let xValue,
-  yValue = 0;
+let xValue = 0;
+let yValue = 0;
 
 function updateHeroSection(cursorPositionX) {
   parallax_els.forEach((el) => {
@@ -43,113 +36,127 @@ window.addEventListener("mousemove", (e) => {
   xValue = e.clientX - windowCenter.x;
   yValue = e.clientY - windowCenter.y;
 
-  rotateDegree = (xValue / windowCenter.x) * 20;
-
   updateHeroSection(e.clientX);
 });
 
 /* GSAP Animation */
-// hero-section
-const hero_tl = gsap.timeline({
-  scrollTrigger: {
-    // animation: hero_tl,
-    trigger: "#hero-section",
-    start: "10% top",
-    end: "80% top",
-    scrub: true,
-    markers: false,
-    id: "hero-section"
-  },
-});
-hero_tl.to("#hero-section", { autoAlpha: 0, duration: 1 });
+const gsapInstance = window.gsap;
+const scrollTriggerPlugin = window.ScrollTrigger;
 
-// story-section
-const story_tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#story-section",
-    start: "top top",
-    end: "+=6000",
-    scrub: true,
-    pin: true,
-    anticipatePin: 1,
-    markers: false,
-    id: "story-section",
-  },
-});
+if (gsapInstance && scrollTriggerPlugin) {
+  // 모바일에서 스크롤이 길어질 경우 하단 주소창이 사라지는 등 vh 값이 변동되는 문제 해결을 위해 처리한 부분
+  scrollTriggerPlugin.config({
+    autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
+  });
+  // ScrollTrigger config 설정
+  gsapInstance.registerPlugin(scrollTriggerPlugin);
 
-story_tl
-  .from("#story-section", { autoAlpha: 0, duration: 1 })
-  .fromTo(
-    ".part-1 .text",
-    { autoAlpha: 0, duration: 1, y: 100 },
-    { autoAlpha: 1, duration: 1, y: 0 },
-    0
-  )
-  .fromTo(
-    ".part-1 .img",
-    { autoAlpha: 0, duration: 1, y: 40 },
-    { autoAlpha: 1, duration: 1, y: 0 },
-    0
-  )
-  .to(".part-1 .text", { autoAlpha: 0, duration: 1, y: -40 })
-  .to(".part-1 .img", { autoAlpha: 0, duration: 1, y: -40 }, "<")
-  .fromTo(
-    ".part-2 .text",
-    { autoAlpha: 0, duration: 1, y: 100 },
-    { autoAlpha: 1, duration: 1, y: 0 },
-    2
-  )
-  .fromTo(
-    ".part-2 .img",
-    { autoAlpha: 0, duration: 1, y: 40 },
-    { autoAlpha: 1, duration: 1, y: 0 },
-    2
-  )
-  .to(".part-2 .text", { autoAlpha: 0, duration: 1, y: -40 })
-  .to(".part-2 .img", { autoAlpha: 0, duration: 1, y: -40 }, "<")
-  .fromTo(
-    ".part-3 .text",
-    { autoAlpha: 0, duration: 1, y: 100 },
-    { autoAlpha: 1, duration: 1, y: 0 },
-    4
-  )
-  .fromTo(
-    ".part-3 .img",
-    { autoAlpha: 0, duration: 1, y: 40 },
-    { autoAlpha: 1, duration: 1, y: 0 },
-    4
-  )
-  .to(".part-3 .text", { autoAlpha: 0, duration: 1, y: -40 })
-  .to(".part-3 .img", { autoAlpha: 0, duration: 1, y: -40 }, "<")
-  .to("#story-section", { autoAlpha: 0, duration: 1 }, "<");
+  // hero-section
+  const hero_tl = gsapInstance.timeline({
+    scrollTrigger: {
+      // animation: hero_tl,
+      trigger: "#hero-section",
+      start: "10% top",
+      end: "80% top",
+      scrub: true,
+      markers: false,
+      id: "hero-section",
+    },
+  });
+  hero_tl.to("#hero-section", { autoAlpha: 0, duration: 1 });
 
-// best-section
-const best_tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#best-section",
-    start: "top bottom",
-    end: "+=6000",
-    markers: false,
-    id: "best-section",
-  },
-});
+  // story-section
+  const story_tl = gsapInstance.timeline({
+    scrollTrigger: {
+      trigger: "#story-section",
+      start: "top top",
+      end: "+=6000",
+      scrub: true,
+      pin: true,
+      anticipatePin: 1,
+      markers: false,
+      id: "story-section",
+    },
+  });
 
-best_tl
-  .from(".best-part-1 .img", { autoAlpha: 0, duration: 1, x: 600 })
-  .from(".best-part-1 .text", { autoAlpha: 0, duration: 1, y: 400 }, "<")
-  .from(".best-part-2 .img", { autoAlpha: 0, duration: 1, x: -600 }, "<")
-  .from(".best-part-2 .text", { autoAlpha: 0, duration: 1, y: 400 }, "<");
+  story_tl
+    .from("#story-section", { autoAlpha: 0, duration: 1 })
+    .fromTo(
+      ".part-1 .text",
+      { autoAlpha: 0, duration: 1, y: 100 },
+      { autoAlpha: 1, duration: 1, y: 0 },
+      0
+    )
+    .fromTo(
+      ".part-1 .img",
+      { autoAlpha: 0, duration: 1, y: 40 },
+      { autoAlpha: 1, duration: 1, y: 0 },
+      0
+    )
+    .to(".part-1 .text", { autoAlpha: 0, duration: 1, y: -40 })
+    .to(".part-1 .img", { autoAlpha: 0, duration: 1, y: -40 }, "<")
+    .fromTo(
+      ".part-2 .text",
+      { autoAlpha: 0, duration: 1, y: 100 },
+      { autoAlpha: 1, duration: 1, y: 0 },
+      2
+    )
+    .fromTo(
+      ".part-2 .img",
+      { autoAlpha: 0, duration: 1, y: 40 },
+      { autoAlpha: 1, duration: 1, y: 0 },
+      2
+    )
+    .to(".part-2 .text", { autoAlpha: 0, duration: 1, y: -40 })
+    .to(".part-2 .img", { autoAlpha: 0, duration: 1, y: -40 }, "<")
+    .fromTo(
+      ".part-3 .text",
+      { autoAlpha: 0, duration: 1, y: 100 },
+      { autoAlpha: 1, duration: 1, y: 0 },
+      4
+    )
+    .fromTo(
+      ".part-3 .img",
+      { autoAlpha: 0, duration: 1, y: 40 },
+      { autoAlpha: 1, duration: 1, y: 0 },
+      4
+    )
+    .to(".part-3 .text", { autoAlpha: 0, duration: 1, y: -40 })
+    .to(".part-3 .img", { autoAlpha: 0, duration: 1, y: -40 }, "<")
+    .to("#story-section", { autoAlpha: 0, duration: 1 }, "<");
 
-// scroll down button fade out
-const summary_tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#summary-section",
-    start: "top bottom",
-    end: "bottom bottom",
-    markers: false,
-    scrub: true,
-    id: "summary-section",
-  },
-});
+  // best-section
+  const best_tl = gsapInstance.timeline({
+    scrollTrigger: {
+      trigger: "#best-section",
+      start: "top bottom",
+      end: "+=6000",
+      markers: false,
+      id: "best-section",
+    },
+  });
 
-summary_tl.to(".scroll-down", { opacity: 0 });
+  best_tl
+    .from(".best-part-1 .img", { autoAlpha: 0, duration: 1, x: 600 })
+    .from(".best-part-1 .text", { autoAlpha: 0, duration: 1, y: 400 }, "<")
+    .from(".best-part-2 .img", { autoAlpha: 0, duration: 1, x: -600 }, "<")
+    .from(".best-part-2 .text", { autoAlpha: 0, duration: 1, y: 400 }, "<");
+
+  // scroll down button fade out
+  const summary_tl = gsapInstance.timeline({
+    scrollTrigger: {
+      trigger: "#summary-section",
+      start: "top bottom",
+      end: "bottom bottom",
+      markers: false,
+      scrub: true,
+      id: "summary-section",
+    },
+  });
+
+  summary_tl.to(".scroll-down", { opacity: 0 });
+} else {
+  console.warn(
+    "GSAP or ScrollTrigger failed to load. Scroll animations are disabled."
+  );
+}
