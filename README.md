@@ -5,7 +5,7 @@ ONDO THE SEA 고래풀 정적 랜딩 페이지입니다.
 ## 구조
 
 - `index.html`: 페이지 마크업과 메타 태그
-- `blank.html`: 빈 정적 페이지 (`https://ondothesea.com/blank.html`)
+- `product_detail.html`: 빈 정적 페이지 (`https://ondothesea.com/product_detail.html`)
 - `css/style.scss`: 원본 SCSS
 - `css/style.css`: 브라우저가 로드하는 컴파일된 CSS
 - `js/whale-grass.js`: 히어로 parallax와 GSAP ScrollTrigger 애니메이션
