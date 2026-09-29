@@ -11,7 +11,7 @@
 - `img/ondo/`: 새 랜딩페이지 WebP 이미지와 소셜 공유 이미지
 - `docs/landing-v2.md`: 디자인 기준, 이미지 출처 및 검증 기록
 
-기존 `js/whale-grass.js`와 `img/whale-grass/`는 이전 디자인 자산입니다. 새 페이지에서는 GSAP나 별도 JavaScript를 로드하지 않습니다.
+페이지에는 별도 JavaScript를 사용하지 않습니다. 루트 `favicon.ico`는 사이트 파비콘으로 유지합니다.
 
 ## 로컬 확인
 
