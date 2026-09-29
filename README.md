@@ -1,38 +1,34 @@
 # simlanding
 
-ONDO THE SEA 고래풀 정적 랜딩 페이지입니다.
+온도더시 회사 및 고래풀 브랜드를 소개하는 정적 랜딩페이지입니다. 디자인 v2 기준으로 헤더 메뉴, 첫 화면 버튼, 제품 표기정보 버튼 없이 구성했습니다.
 
 ## 구조
 
-- `index.html`: 페이지 마크업과 메타 태그
-- `product_detail.html`: 시오콘부 제품 표기정보 및 영양정보 (`https://ondothesea.com/product_detail.html`)
-- `css/style.scss`: 원본 SCSS
-- `css/style.css`: 브라우저가 로드하는 컴파일된 CSS
-- `js/whale-grass.js`: 히어로 parallax와 GSAP ScrollTrigger 애니메이션
-- `img/whale-grass/`: 페이지 이미지 자산
+- `index.html`: 회사 소개 → 고래풀 → 시오콘부 → 문의, 공유 메타데이터
+- `product_detail.html`: 기존 시오콘부 표기정보 페이지 (독립 경로 유지)
+- `css/style.scss`: 랜딩페이지 스타일 원본
+- `css/style.css`, `css/style.css.map`: 배포용 컴파일 결과
+- `img/ondo/`: 새 랜딩페이지 WebP 이미지와 소셜 공유 이미지
+- `docs/landing-v2.md`: 디자인 기준, 이미지 출처 및 검증 기록
+
+기존 `js/whale-grass.js`와 `img/whale-grass/`는 이전 디자인 자산입니다. 새 페이지에서는 GSAP나 별도 JavaScript를 로드하지 않습니다.
 
 ## 로컬 확인
 
-브라우저에서 `index.html`을 직접 열어 확인할 수 있습니다.
-
-## SCSS 수정
-
-처음 한 번 의존성을 설치합니다.
-
 ```sh
-npm install
-```
-
-SCSS를 CSS로 컴파일합니다.
-
-```sh
+npm ci
 npm run build:css
+python3 -m http.server 8766 --bind 127.0.0.1
 ```
 
-수정 중 자동 컴파일이 필요하면 watch 명령을 사용합니다.
+`http://127.0.0.1:8766/`을 열어 확인합니다. SCSS를 수정한 뒤에는 컴파일된 CSS와 소스맵도 함께 반영합니다.
 
 ```sh
 npm run watch:css
 ```
 
-`index.html`은 `css/style.css`를 로드하므로 스타일 변경 시 컴파일된 CSS도 함께 커밋해야 합니다.
+폰트는 Pretendard를 우선 사용하고 설치되어 있지 않으면 운영체제의 한국어 산세리프 폰트를 사용합니다. 외부 폰트·스크립트 요청 없이 표시됩니다.
+
+## 배포
+
+GitHub Pages와 기존 `CNAME` 설정을 유지합니다. 이 작업 브랜치는 검토용이며 main 병합·푸시는 별도로 진행합니다.
