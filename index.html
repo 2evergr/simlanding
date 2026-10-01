@@ -42,19 +42,26 @@
       </div>
     </section>
 
-    <section class="company" aria-labelledby="company-title">
-      <div class="company-image">
-        <img src="./img/ondo/kelp-1440.webp" srcset="./img/ondo/kelp-640.webp 640w, ./img/ondo/kelp-1440.webp 1440w" sizes="(min-width: 768px) 45vw, 100vw" width="1440" height="1080" alt="햇살이 스며드는 바닷속 해조류의 컨셉 이미지" loading="lazy" decoding="async">
-      </div>
-      <div class="company-content">
-        <p class="eyebrow" lang="en">ABOUT ONDO THE SEA</p>
-        <h2 id="company-title">바다에 대한 이해를,<br>식품을 만드는 기준으로.</h2>
-        <p class="body-copy">온도더시는 바다를 사랑하는 해조류 전문가가 운영하는 식품 제조업체입니다.</p>
-        <ul class="principles">
-          <li>해조류에 대한 이해</li>
-          <li>정직한 제조 철학</li>
-          <li>알기 쉬운 제품정보</li>
-        </ul>
+    <section class="company-story" aria-labelledby="company-title">
+      <div class="company-story-sticky">
+        <div class="story-visual" aria-hidden="true">
+            <div class="story-image is-active" data-story-image="0"><img src="./img/ondo/story/understanding.webp" width="900" height="1125" alt="바닷속에서 자라는 해조류의 컨셉 이미지" loading="lazy"></div>
+            <div class="story-image" data-story-image="1"><img src="./img/ondo/story/honesty.webp" width="900" height="1125" alt="깨끗한 공간에 준비된 해조류 식재료의 컨셉 이미지" loading="lazy"></div>
+            <div class="story-image" data-story-image="2"><img src="./img/ondo/story/information.webp" width="900" height="1125" alt="세 가지 해조류를 정돈해 배치한 컨셉 이미지" loading="lazy"></div>
+            <span class="story-shade"></span>
+        </div>
+        <div class="container story-content">
+          <div class="story-intro">
+            <p class="eyebrow" lang="en">ABOUT ONDO THE SEA</p>
+            <h2 id="company-title">바다에 대한 이해를,<br>식품을 만드는 기준으로.</h2>
+            <p class="body-copy">온도더시는 바다를 사랑하는 해조류 전문가가 운영하는 식품 제조업체입니다.</p>
+          </div>
+          <ol class="story-list">
+            <li class="story-item is-active" data-story-item="0"><span class="story-number">01</span><div><h3>해조류에 대한 이해</h3><p>바다에서 자라는 식재료의 결을 먼저 살핍니다.</p></div></li>
+            <li class="story-item" data-story-item="1"><span class="story-number">02</span><div><h3>정직한 제조 철학</h3><p>깨끗하게 다루고, 필요한 과정만 남겨 식품을 만듭니다.</p></div></li>
+            <li class="story-item" data-story-item="2"><span class="story-number">03</span><div><h3>알기 쉬운 제품정보</h3><p>무엇을 먹는지 알 수 있도록 제품의 이야기를 또렷하게 전합니다.</p></div></li>
+          </ol>
+        </div>
       </div>
     </section>
 
@@ -115,5 +122,6 @@
       <span class="footer-divider" aria-hidden="true"></span><span class="footer-brand">고래풀</span>
     </div>
   </footer>
+  <script src="./js/company-story.js" defer></script>
 </body>
 </html>

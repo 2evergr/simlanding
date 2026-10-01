@@ -9,9 +9,11 @@
 - `css/style.scss`: 랜딩페이지 스타일 원본
 - `css/style.css`, `css/style.css.map`: 배포용 컴파일 결과
 - `img/ondo/`: 새 랜딩페이지 WebP 이미지와 소셜 공유 이미지
+- `img/ondo/story/`: 회사 소개 스크롤 스토리용 컨셉 이미지 3종
+- `js/company-story.js`: 회사 소개 스크롤 위치에 맞춰 항목과 이미지 상태를 전환하는 최소 스크립트
 - `docs/landing-v2.md`: 디자인 기준, 이미지 출처 및 검증 기록
 
-페이지에는 별도 JavaScript를 사용하지 않습니다. 루트 `favicon.ico`는 사이트 파비콘으로 유지합니다.
+회사 소개 스크롤 스토리에만 작은 JavaScript를 사용하며 `prefers-reduced-motion` 환경에서는 첫 항목을 고정합니다. 루트 `favicon.ico`는 사이트 파비콘으로 유지합니다.
 
 ## 로컬 확인
 

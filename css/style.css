@@ -168,46 +168,125 @@ svg {
   color: var(--muted);
 }
 
-.company {
-  display: grid;
-  grid-template-columns: 45% 55%;
+.company-story {
+  position: relative;
+  height: 340vh;
+  background: var(--ink);
 }
 
-.company-image img {
+.company-story-sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+.story-visual {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.story-image {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0.7s ease, transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.story-image.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.story-image img {
   height: 100%;
-  min-height: 560px;
   object-fit: cover;
 }
 
-.company-content {
-  align-self: center;
-  padding: 88px clamp(40px, 5.5vw, 80px);
-  max-width: 790px;
+.story-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(6, 35, 52, 0.9098039216) 0%, rgba(6, 35, 52, 0.7215686275) 38%, rgba(6, 35, 52, 0.2784313725) 70%, rgba(6, 35, 52, 0.5019607843) 100%), linear-gradient(0deg, rgba(6, 35, 52, 0.7215686275), rgba(6, 35, 52, 0) 55%);
 }
 
-.principles {
+.story-content {
+  position: relative;
+  z-index: 2;
   display: flex;
-  flex-wrap: wrap;
-  row-gap: 18px;
-  margin: 48px 0 0;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: min(760px, 86svh);
+  padding-block: 72px;
+}
+
+.story-intro {
+  max-width: 680px;
+}
+
+.story-intro .eyebrow {
+  color: var(--sky);
+}
+
+.story-intro .body-copy {
+  max-width: 560px;
+  color: #d8edf5;
+}
+
+.story-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 56px 0 0;
   padding: 0;
   list-style: none;
-  font-size: 15px;
-  font-weight: 650;
 }
 
-.principles li {
-  padding-inline: 20px;
-  border-left: 1px solid #8fbad3;
+.story-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  min-height: 150px;
+  padding: 22px 20px 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3490196078);
+  color: #c6d9e1;
+  transition: color 0.45s ease, border-color 0.45s ease, opacity 0.45s ease, transform 0.45s ease;
+  opacity: 0.55;
 }
 
-.principles li:first-child {
-  border-left: 0;
-  padding-left: 0;
+.story-item.is-active {
+  color: #fff;
+  border-color: var(--sky);
+  opacity: 1;
+  transform: translateY(-6px);
 }
 
-.principles li:last-child {
-  padding-right: 0;
+.story-number {
+  color: var(--ocean);
+  font: 700 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.1em;
+}
+
+.story-item.is-active .story-number {
+  color: var(--sky);
+}
+
+.story-item h3 {
+  font-size: 25px;
+  line-height: 1.35;
+}
+
+.story-item p {
+  max-width: 420px;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.65;
 }
 
 .brand {
@@ -385,20 +464,8 @@ svg {
 }
 
 @media (min-width: 768px) and (max-width: 1100px) {
-  .company-content {
-    padding: 64px 36px;
-  }
   h2 {
     font-size: 34px;
-  }
-  .principles {
-    display: grid;
-    gap: 14px;
-    margin-top: 32px;
-  }
-  .principles li, .principles li:first-child {
-    border-left: 1px solid #8fbad3;
-    padding-inline: 16px 0;
   }
   .brand-layout {
     gap: 36px;
@@ -459,17 +526,36 @@ svg {
   .mobile-break {
     display: inline;
   }
-  .company {
-    display: block;
+  .company-story {
+    height: 300vh;
   }
-  .company-image img {
-    min-height: 0;
-    height: auto;
-    aspect-ratio: 4/3;
-    object-fit: cover;
+  .company-story-sticky {
+    min-height: 620px;
   }
-  .company-content {
-    padding: 56px 24px;
+  .story-content {
+    min-height: min(680px, 90svh);
+    padding-block: 48px 40px;
+  }
+  .story-list {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 32px;
+  }
+  .story-item {
+    min-height: auto;
+    grid-template-columns: 38px 1fr;
+    gap: 14px;
+    padding: 18px 0;
+  }
+  .story-item h3 {
+    font-size: 21px;
+  }
+  .story-item p {
+    margin-top: 7px;
+    font-size: 15px;
+  }
+  .story-shade {
+    background: linear-gradient(180deg, rgba(6, 35, 52, 0.9215686275) 0%, rgba(6, 35, 52, 0.6) 46%, rgba(6, 35, 52, 0.8509803922) 100%);
   }
   .eyebrow {
     font-size: 11px;
@@ -477,16 +563,6 @@ svg {
   }
   .body-copy {
     margin-top: 24px;
-  }
-  .principles {
-    display: grid;
-    gap: 16px;
-    margin-top: 32px;
-    font-size: 16px;
-  }
-  .principles li, .principles li:first-child {
-    border-left: 1px solid var(--ocean);
-    padding-inline: 18px 0;
   }
   .brand {
     padding-block: 56px;
@@ -559,6 +635,11 @@ svg {
     gap: 24px;
   }
 }
+@media (prefers-reduced-motion: reduce) {
+  .story-image, .story-item {
+    transition: none;
+  }
+}
 @media (max-width: 359px) {
   .hero h1 {
     font-size: 34px;
@@ -587,7 +668,7 @@ svg {
   .hero-content {
     padding-block: 48px;
   }
-  .company, .brand-layout, .product-layout {
+  .company-story, .brand-layout, .product-layout {
     break-inside: avoid;
   }
   .contact-sea {
