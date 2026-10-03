@@ -82,14 +82,38 @@
           <h2 id="products-title">고래풀의 제품을 만나보세요</h2>
         </div>
         <article class="product-layout" aria-labelledby="product-title">
-          <figure class="product-image">
-            <img src="./img/ondo/shiokombu-1440.webp" srcset="./img/ondo/shiokombu-640.webp 640w, ./img/ondo/shiokombu-1440.webp 1440w" sizes="(min-width: 768px) 55vw, calc(100vw - 48px)" width="1440" height="1080" alt="흰 접시에 담긴 시오콘부의 연출 이미지" loading="lazy" decoding="async">
-            <figcaption>제품 이해를 돕기 위한 연출 이미지입니다.</figcaption>
+          <figure class="product-image product-carousel" aria-label="시오콘부 활용 이미지 4장">
+            <div class="product-carousel-viewport">
+              <div class="product-slide is-active" data-product-slide aria-hidden="false">
+                <img src="./img/ondo/shiokombu-onigiri-v2-1440.webp" srcset="./img/ondo/shiokombu-onigiri-v2-640.webp 640w, ./img/ondo/shiokombu-onigiri-v2-1440.webp 1440w" sizes="(min-width: 768px) 55vw, calc(100vw - 48px)" width="1440" height="1080" alt="시오콘부와 참깨를 섞은 주먹밥 연출 이미지" loading="lazy" decoding="async">
+              </div>
+              <div class="product-slide" data-product-slide aria-hidden="true">
+                <img src="./img/ondo/shiokombu-egg-rice-1440.webp" srcset="./img/ondo/shiokombu-egg-rice-640.webp 640w, ./img/ondo/shiokombu-egg-rice-1440.webp 1440w" sizes="(min-width: 768px) 55vw, calc(100vw - 48px)" width="1440" height="1080" alt="시오콘부를 올린 계란밥 연출 이미지" loading="lazy" decoding="async">
+              </div>
+              <div class="product-slide" data-product-slide aria-hidden="true">
+                <img src="./img/ondo/shiokombu-tomato-shiso-1440.webp" srcset="./img/ondo/shiokombu-tomato-shiso-640.webp 640w, ./img/ondo/shiokombu-tomato-shiso-1440.webp 1440w" sizes="(min-width: 768px) 55vw, calc(100vw - 48px)" width="1440" height="1080" alt="시오콘부와 토마토·시소를 무친 요리 연출 이미지" loading="lazy" decoding="async">
+              </div>
+              <div class="product-slide" data-product-slide aria-hidden="true">
+                <img src="./img/ondo/shiokombu-cabbage-1440.webp" srcset="./img/ondo/shiokombu-cabbage-640.webp 640w, ./img/ondo/shiokombu-cabbage-1440.webp 1440w" sizes="(min-width: 768px) 55vw, calc(100vw - 48px)" width="1440" height="1080" alt="시오콘부와 양배추를 무친 요리 연출 이미지" loading="lazy" decoding="async">
+              </div>
+              <div class="product-carousel-controls" hidden>
+                <button class="product-carousel-arrow" type="button" data-product-prev aria-label="이전 이미지">‹</button>
+                <div class="product-carousel-dots" aria-label="이미지 선택">
+                  <button type="button" data-product-dot="0" aria-label="1번 이미지 보기" aria-current="true"></button>
+                  <button type="button" data-product-dot="1" aria-label="2번 이미지 보기"></button>
+                  <button type="button" data-product-dot="2" aria-label="3번 이미지 보기"></button>
+                  <button type="button" data-product-dot="3" aria-label="4번 이미지 보기"></button>
+                </div>
+                <button class="product-carousel-arrow" type="button" data-product-next aria-label="다음 이미지">›</button>
+              </div>
+            </div>
+            <figcaption>시오콘부 활용 예시를 생성 이미지로 표현했습니다. 실제 제품 사진은 아닙니다.</figcaption>
           </figure>
           <div class="product-copy">
             <h3 id="product-title">시오콘부</h3>
             <div class="small-rule" aria-hidden="true"></div>
             <p class="body-copy">주먹밥, 무침, 볶음요리에<br>기호에 맞게 더해보세요.</p>
+            <a class="product-detail-link" href="./product_detail.html">영양성분·제품정보 보기 <span aria-hidden="true">↗</span></a>
           </div>
         </article>
       </div>
@@ -123,5 +147,6 @@
     </div>
   </footer>
   <script src="./js/company-story.js" defer></script>
+  <script src="./js/product-carousel.js" defer></script>
 </body>
 </html>
